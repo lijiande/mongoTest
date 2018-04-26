@@ -9,7 +9,7 @@ RUN sed -Ee "s/(<mirrors>)/\1\n    <mirror>\n      <id>alimaven<\/id>\n      <mi
 # 安装依赖
 RUN mvn clean install -Dmaven.test.skip=true
 
-RUN sh -c ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo "Asia/Shanghai" > /etc/timezone
+RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo "Asia/Shanghai" > /etc/timezone
 
 CMD exec java -Xms128m -Xmx128m -jar ./target/demo-0.0.1-SNAPSHOT.jar
 
