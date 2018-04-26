@@ -21,7 +21,7 @@ public class ScheduleUtil {
     private CommonConfig commonConfig;
 
 
-    @Scheduled(cron = "0/10 * * * * ?")
+    @Scheduled(cron = "0/1 * * * * ?")
     private void run() {
         int theadNum = commonConfig.getOrSetThreadNum(null);
         int num = commonConfig.getOrSetNum(null);
