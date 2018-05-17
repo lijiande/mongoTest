@@ -4,8 +4,15 @@ spring:
     name: mongoTest
   data:
     mongodb:
-      uri: mongodb://172.17.20.169:27017
+      uri: mongodb://39.107.234.182:27017
       database: mongoTest
+  mvc:
+    view:
+      prefix: classpath:/templates/
+      suffix: .html
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
 server:
-  port: 9000
+  port: 9001
 
